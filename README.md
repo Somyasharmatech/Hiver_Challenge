@@ -9,6 +9,7 @@ A production-ready, highly robust Customer Email Response System designed for th
 - **Dual-Mode Operation:** 
   - *Benchmark Mode:* Tests the model against a pre-generated dataset of 100 realistic customer support emails to compute full NLP and Qualitative metrics.
   - *Real-world Mode:* Allows you to paste any custom email to get an instant reply, evaluated qualitatively.
+> **Note for Reviewers:** This live demo runs on the **Gemini Free Tier API**. Because our pipeline rigorously evaluates multiple metrics in the background, you may encounter a temporary "Quota Exceeded" error if you click the generate button rapidly. If this happens, simply wait 60 seconds and try again!
 - **Strict Sequential Reasoning Pipeline:** Extracts Intent → Emotion → Urgency → Confidence before drafting any reply. Built with rigorous `try-except` error handling that halts on failure rather than hallucinating placeholder values.
 - **Explainable Evaluation Dashboard:** Calculates quantitative (BLEU, ROUGE, Cosine Sim, Readability) and qualitative (Empathy, Professionalism, Completeness, Helpfulness, Grammar, Hallucination Risk) scores, providing a transparent reason for *every* score.
 - **AI Coach (Iterative Improvement):** Suggests improvements for any generated reply, outputs an enhanced version, and projects the expected score increase based on identified strengths and weaknesses.
