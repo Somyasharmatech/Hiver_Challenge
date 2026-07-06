@@ -2,7 +2,8 @@ import json
 import time
 import os
 import traceback
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 from prompts import ANALYSIS_PROMPT, REPLY_PROMPT, EVALUATION_PROMPT, COACH_PROMPT
 import re
@@ -16,9 +17,7 @@ def log_error(filename, error_msg, exception=None):
         if exception:
             f.write(traceback.format_exc() + "\n")
 
-# Initialize Gemini
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
+# Initialize Gemini client when class is instantiated, not globally
 
 def clean_json_response(response_text):
     """Clean markdown formatting from Gemini JSON response."""
@@ -35,14 +34,16 @@ class AIGenerator:
     def __init__(self):
         if not GEMINI_API_KEY:
             raise ValueError("GEMINI_API_KEY is missing. Check .env file.")
-        self.model = genai.GenerativeModel(GEMINI_MODEL_NAME)
-        # For evaluation & coach, we might want lower temperature
-        self.eval_model = genai.GenerativeModel(GEMINI_MODEL_NAME, generation_config={"temperature": 0.1})
+        self.client = genai.Client(api_key=GEMINI_API_KEY)
 
-    def _generate_with_retry(self, prompt, model_instance, retries=3):
+    def _generate_with_retry(self, prompt, config=None, retries=3):
         for attempt in range(retries + 1):
             try:
-                response = model_instance.generate_content(prompt)
+                response = self.client.models.generate_content(
+                    model=GEMINI_MODEL_NAME,
+                    contents=prompt,
+                    config=config
+                )
                 return response
             except Exception as e:
                 log_error("errors.log", f"Gemini API Error (Attempt {attempt+1}): {str(e)}", e)
@@ -57,7 +58,7 @@ class AIGenerator:
         prompt = ANALYSIS_PROMPT.format(email_body=email_body)
         try:
             start_time = time.time()
-            response = self._generate_with_retry(prompt, self.model)
+            response = self._generate_with_retry(prompt)
             duration = time.time() - start_time
             
             cleaned_json = clean_json_response(response.text)
@@ -66,7 +67,7 @@ class AIGenerator:
             except json.JSONDecodeError as e:
                 log_error("errors.log", f"JSON Parse Error in analyze_email: {response.text}", e)
                 # Retry once for JSON parse error
-                response = self._generate_with_retry(prompt, self.model)
+                response = self._generate_with_retry(prompt)
                 cleaned_json = clean_json_response(response.text)
                 analysis = json.loads(cleaned_json)
                 
@@ -90,7 +91,7 @@ class AIGenerator:
         )
         try:
             start_time = time.time()
-            response = self._generate_with_retry(prompt, self.model)
+            response = self._generate_with_retry(prompt)
             duration = time.time() - start_time
             
             # Simple token estimation (1 token approx 4 characters)
@@ -117,13 +118,14 @@ class AIGenerator:
             generated_reply=generated_reply
         )
         try:
-            response = self._generate_with_retry(prompt, self.eval_model)
+            config = types.GenerateContentConfig(temperature=0.1)
+            response = self._generate_with_retry(prompt, config=config)
             cleaned_json = clean_json_response(response.text)
             try:
                 res_json = json.loads(cleaned_json)
             except json.JSONDecodeError as e:
                 log_error("errors.log", f"JSON Parse Error in evaluate_qualitative: {response.text}", e)
-                response = self._generate_with_retry(prompt, self.eval_model)
+                response = self._generate_with_retry(prompt, config=config)
                 cleaned_json = clean_json_response(response.text)
                 res_json = json.loads(cleaned_json)
                 
@@ -144,13 +146,14 @@ class AIGenerator:
             score=score
         )
         try:
-            response = self._generate_with_retry(prompt, self.eval_model)
+            config = types.GenerateContentConfig(temperature=0.1)
+            response = self._generate_with_retry(prompt, config=config)
             cleaned_json = clean_json_response(response.text)
             try:
                 res_json = json.loads(cleaned_json)
             except json.JSONDecodeError as e:
                 log_error("errors.log", f"JSON Parse Error in coach: {response.text}", e)
-                response = self._generate_with_retry(prompt, self.eval_model)
+                response = self._generate_with_retry(prompt, config=config)
                 cleaned_json = clean_json_response(response.text)
                 res_json = json.loads(cleaned_json)
                 
