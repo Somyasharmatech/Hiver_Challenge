@@ -1,6 +1,10 @@
 # AI Email Response Intelligence 🧠✉️
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Play_Now-000000?style=for-the-badge&logo=streamlit&logoColor=white)](https://hiverchallenge-8ckxvrgahym4aom73qwjch.streamlit.app/)
+[![Video Walkthrough](https://img.shields.io/badge/Video_Walkthrough-Watch_Now-red?style=for-the-badge&logo=youtube&logoColor=white)](https://drive.google.com/file/d/15nBNhfxoPhafSAhKKa4qb0gMwdp8TGNw/view?usp=sharing&t=26.544)
+
+> [!IMPORTANT]  
+> 🎥 **Recruiters & Reviewers:** Please [watch the full video walkthrough here](https://drive.google.com/file/d/15nBNhfxoPhafSAhKKa4qb0gMwdp8TGNw/view?usp=sharing&t=26.544) to see the system's end-to-end reasoning pipeline, dual-mode operation, and explainable AI dashboard in action!
 
 A production-ready, highly robust Customer Email Response System designed for the Hiver AI Internship Open Challenge. This application leverages the Gemini API to analyze customer intents, generate empathetic replies, and rigorously evaluate the response quality using advanced NLP metrics inside a premium, glassmorphism-styled SaaS dashboard.
 
