@@ -1,16 +1,17 @@
 # AI Email Response Intelligence 🧠✉️
 
-A production-ready, AI-powered Customer Email Response System designed for the Hiver AI Internship Open Challenge. This application leverages the Gemini API to analyze customer intents, generate empathetic replies, and rigorously evaluate the response quality using advanced NLP metrics (BLEU, ROUGE, BERTScore, Cosine Similarity) inside a premium, glassmorphism-styled SaaS dashboard.
+A production-ready, highly robust Customer Email Response System designed for the Hiver AI Internship Open Challenge. This application leverages the Gemini API to analyze customer intents, generate empathetic replies, and rigorously evaluate the response quality using advanced NLP metrics inside a premium, glassmorphism-styled SaaS dashboard.
 
 ## 🚀 Features
 
-- **Programmatic Dataset Generation:** Deterministically generates 100 realistic customer support emails across 20 categories (no Gemini hallucination for data).
-- **AI Reasoning Pipeline:** Extracts Intent → Emotion → Urgency → Required Action before drafting any reply.
-- **Explainable Evaluation (Explainable AI):** Calculates quantitative (BLEU, ROUGE, Cosine Sim, Readability) and qualitative (Empathy, Professionalism) scores, providing a transparent reason for *every* score.
-- **Enterprise Analytics Dashboard:** Built with Plotly, featuring Gauge charts and Radar charts.
-- **AI Coach (Iterative Improvement):** Suggests improvements for any generated reply and outputs an enhanced version.
-- **Premium SaaS UI:** Custom CSS hides default Streamlit styling in favor of modern glassmorphism, animated buttons, and gradient text.
-- **Semantic Diff Comparison:** GitHub-style side-by-side highlighting of differences between the Expected baseline and the AI Generated reply.
+- **Dual-Mode Operation:** 
+  - *Benchmark Mode:* Tests the model against a pre-generated dataset of 100 realistic customer support emails to compute full NLP and Qualitative metrics.
+  - *Real-world Mode:* Allows you to paste any custom email to get an instant reply, evaluated qualitatively.
+- **Strict Sequential Reasoning Pipeline:** Extracts Intent → Emotion → Urgency → Confidence before drafting any reply. Built with rigorous `try-except` error handling that halts on failure rather than hallucinating placeholder values.
+- **Explainable Evaluation Dashboard:** Calculates quantitative (BLEU, ROUGE, Cosine Sim, Readability) and qualitative (Empathy, Professionalism, Completeness, Helpfulness, Grammar, Hallucination Risk) scores, providing a transparent reason for *every* score.
+- **AI Coach (Iterative Improvement):** Suggests improvements for any generated reply, outputs an enhanced version, and projects the expected score increase based on identified strengths and weaknesses.
+- **Premium SaaS UI:** Custom CSS hides default Streamlit styling in favor of modern glassmorphism, animated buttons, dynamic charts (Plotly), and gradient text.
+- **Comprehensive Logging:** Background file logging for generation speeds, tokens, successful evaluations, and captured stack traces.
 
 ## 📁 Project Structure
 
@@ -33,7 +34,7 @@ Hiver_Challenge/
 
 ### 1. Prerequisites
 - Python 3.10+
-- A Google Gemini API Key.
+- A Google Gemini API Key
 
 ### 2. Installation
 
@@ -53,9 +54,9 @@ Edit `.env` and set `GEMINI_API_KEY=your_key_here`.
 
 ### 4. Running the Application
 
-First, (optional) re-generate the dataset if you want fresh data:
+First, ensure NLTK packages are downloaded:
 ```bash
-python dataset_generator.py
+python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
 ```
 
 Then, launch the Streamlit app:
@@ -68,10 +69,10 @@ streamlit run app.py
 1. **BLEU & ROUGE:** For structural and phrasing overlap with expected responses.
 2. **Cosine Similarity (SentenceTransformers):** For semantic meaning comparison (`all-MiniLM-L6-v2`).
 3. **Flesch Reading Ease:** To ensure responses are accessible to all customers.
-4. **Professionalism, Empathy, Grammar, Completeness:** Graded via an LLM-as-a-judge (Gemini 1.5) with reasoning attached.
+4. **Qualitative Metrics:** Professionalism, Empathy, Grammar, Completeness, Helpfulness, and Hallucination Risk (Graded via LLM-as-a-judge with reasoning attached).
 
 ## 🤝 Architecture & Design Philosophy
-This project was built to mimic a real-world enterprise product. It separates concerns (Prompts, UI, Evaluator, Generator) and completely revamps Streamlit's default UI to look like a modern AI SaaS tool (similar to Notion AI or Vercel).
+This project was built to mimic a real-world enterprise product. It separates concerns (Prompts, UI, Evaluator, Generator), utilizes strict JSON parsing with automatic retry logic, and completely revamps Streamlit's default UI to look like a modern AI SaaS tool.
 
 ---
 *Created by [somyasharmatech](https://github.com/somyasharmatech)*

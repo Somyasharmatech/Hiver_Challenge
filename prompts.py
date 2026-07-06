@@ -11,9 +11,10 @@ Output format:
     "intent": "Short 2-3 word summary of what the customer wants",
     "emotion": "Customer's emotional state (e.g. Frustrated, Happy, Neutral, Angry)",
     "urgency": "High, Medium, or Low",
-    "required_action": "What action needs to be taken by support",
-    "reason": "One sentence explaining why you chose this intent and urgency",
-    "entities": ["list", "of", "key", "entities", "mentioned"]
+    "confidence": <integer from 0 to 100 representing confidence in analysis>,
+    "keywords": ["list", "of", "key", "entities", "mentioned"],
+    "missing_information": ["list", "of", "any", "missing", "details", "needed", "to", "resolve"],
+    "summary": "One sentence summary of the customer's issue or request."
 }}
 """
 
@@ -74,8 +75,8 @@ Output format:
         "reason": "Short reason for the score"
     }},
     "Hallucination Risk": {{
-        "score": <int 1-10>,
-        "reason": "Score from 1 (high risk) to 10 (no risk), with reason"
+        "score": <int 1-10, where 10 is high risk and 1 is low risk>,
+        "reason": "Short reason for the score"
     }}
 }}
 """
@@ -98,11 +99,9 @@ Generated Reply:
 
 Output format:
 {{
-    "critique": "A brief explanation of what the generated reply missed or did poorly compared to the expected reply.",
-    "improvement_suggestions": [
-        "Suggestion 1",
-        "Suggestion 2"
-    ],
-    "improved_reply": "The newly generated, better reply that incorporates these suggestions and matches the expected reply's facts."
+    "Strengths": ["List", "of", "what", "was", "done", "well"],
+    "Weaknesses": ["List", "of", "areas", "for", "improvement"],
+    "Improved_Reply": "The newly generated, better reply that incorporates these suggestions.",
+    "Expected_Score": <integer representing the expected new score out of 100>
 }}
 """

@@ -5,14 +5,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # API Keys
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+try:
+    import streamlit as st
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+except Exception:
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 # App Configuration
 APP_NAME = "AI Email Response Intelligence"
 APP_DESCRIPTION = "Generate professional customer support replies and automatically evaluate response quality using advanced NLP metrics."
 
 # Model Configuration
-GEMINI_MODEL_NAME = "gemini-1.5-flash"  # Using 1.5 flash for speed and reliability, can be changed to 1.5 pro
+GEMINI_MODEL_NAME = "gemini-2.5-flash"
 MAX_WORDS = 150
 MIN_WORDS = 60
 

@@ -107,16 +107,8 @@ def generate_diff_html(expected, generated):
     return " ".join(html)
 
 def create_radar_chart(metrics_dict):
-    categories = ['BLEU', 'ROUGE', 'Cosine', 'Readability', 'Professionalism', 'Empathy', 'Completeness']
-    values = [
-        metrics_dict["BLEU"]["score"],
-        metrics_dict["ROUGE"]["score"],
-        metrics_dict["Cosine Similarity"]["score"],
-        metrics_dict["Readability"]["score"],
-        metrics_dict["Professionalism"]["score"],
-        metrics_dict["Empathy"]["score"],
-        metrics_dict["Completeness"]["score"]
-    ]
+    categories = list(metrics_dict.keys())
+    values = [metrics_dict[cat]["score"] for cat in categories]
     
     fig = go.Figure(data=go.Scatterpolar(
       r=values + [values[0]],

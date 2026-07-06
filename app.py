@@ -14,10 +14,10 @@ load_custom_css()
 
 # Initialize AI & Evaluator
 @st.cache_resource
-def load_models():
+def load_ai_models():
     return AIGenerator(), Evaluator()
 
-ai_gen, evaluator = load_models()
+ai_gen, evaluator = load_ai_models()
 
 # Load Dataset
 @st.cache_data
@@ -72,19 +72,21 @@ with col1:
     
     # Sample selection
     selected_sample = None
+    is_benchmark_mode = False
     if dataset:
-        sample_options = ["Paste Custom Email"] + [f"Sample {i+1}: {d['category']} - {d['sentiment']}" for i, d in enumerate(dataset)]
-        selection = st.selectbox("Choose Input Method", sample_options)
+        sample_options = ["✍️ Custom Email (Real-world Mode)"] + [f"📄 Sample {i+1}: {d['category']} (Benchmark Mode)" for i, d in enumerate(dataset)]
+        selection = st.selectbox("📂 Choose Input Source", sample_options)
         
-        if selection != "Paste Custom Email":
-            idx = int(selection.split(":")[0].replace("Sample ", "")) - 1
+        if selection != "✍️ Custom Email (Real-world Mode)":
+            idx = int(selection.split(":")[0].replace("📄 Sample ", "")) - 1
             selected_sample = dataset[idx]
+            is_benchmark_mode = True
     
     default_text = selected_sample['email_body'] if selected_sample else ""
     email_input = st.text_area("Paste customer email here", value=default_text, height=200, label_visibility="collapsed")
     
     expected_reply_input = ""
-    if selected_sample:
+    if is_benchmark_mode and selected_sample:
         expected_reply_input = selected_sample['expected_reply']
         st.markdown("###### Expected Reply (For Evaluation Benchmark)")
         st.info(expected_reply_input[:100] + "...")
@@ -92,24 +94,37 @@ with col1:
     if st.button("✨ Analyze & Generate Reply"):
         if not email_input.strip():
             st.error("Please enter an email.")
-        elif not expected_reply_input.strip() and not selected_sample:
-            st.error("Please provide an expected reply for evaluation or choose a sample.")
         else:
             with st.spinner("Pipeline Running..."):
                 # 1. Reasoning Pipeline
                 st.toast("Reading Email & Detecting Intent...")
                 analysis = ai_gen.analyze_email(email_input)
                 
+                if "error" in analysis:
+                    st.error(f"Reasoning Failed: {analysis['error']}")
+                    st.stop()
+                
                 # 2. Reply Generation
                 st.toast("Generating Professional Response...")
                 gen_result = ai_gen.generate_reply(email_input, analysis)
+                
+                if "error" in gen_result:
+                    st.error(f"Generation Failed: {gen_result['error']}")
+                    st.stop()
                 
                 # 3. Qualitative Eval
                 st.toast("Evaluating with NLP Metrics...")
                 qual_metrics = ai_gen.evaluate_qualitative(email_input, expected_reply_input, gen_result['reply'])
                 
+                if "error" in qual_metrics:
+                    st.error(f"Evaluation Failed: {qual_metrics['error']}")
+                    st.stop()
+                
                 # 4. Final NLP Scoring
-                eval_result = evaluator.run_full_evaluation(expected_reply_input, gen_result['reply'], qual_metrics)
+                if is_benchmark_mode:
+                    eval_result = evaluator.run_full_evaluation(expected_reply_input, gen_result['reply'], qual_metrics)
+                else:
+                    eval_result = evaluator.run_realworld_evaluation(gen_result['reply'], qual_metrics)
                 
                 # Save to state
                 st.session_state.current_analysis = {
@@ -118,7 +133,8 @@ with col1:
                     "analysis": analysis,
                     "generated": gen_result['reply'],
                     "time": gen_result['duration'],
-                    "tokens": gen_result['tokens']
+                    "tokens": gen_result['tokens'],
+                    "is_benchmark": is_benchmark_mode
                 }
                 st.session_state.current_eval = eval_result
                 st.session_state.coach_feedback = None # Reset coach
@@ -138,9 +154,11 @@ with col1:
         <div class='metric-chip'>Intent <span>{an.get('intent', 'N/A')}</span></div>
         <div class='metric-chip'>Emotion <span>{an.get('emotion', 'N/A')}</span></div>
         <div class='metric-chip'>Urgency <span>{an.get('urgency', 'N/A')}</span></div>
+        <div class='metric-chip'>Confidence <span>{an.get('confidence', 'N/A')}%</span></div>
         """, unsafe_allow_html=True)
-        st.caption(f"**Reason:** {an.get('reason', 'N/A')}")
-        st.caption(f"**Required Action:** {an.get('required_action', 'N/A')}")
+        st.caption(f"**Keywords:** {', '.join(an.get('keywords', []))}")
+        st.caption(f"**Missing Information:** {', '.join(an.get('missing_information', ['None']))}")
+        st.caption(f"**Summary:** {an.get('summary', 'N/A')}")
         st.markdown("</div>", unsafe_allow_html=True)
 
 with col2:
@@ -180,12 +198,13 @@ with col2:
                 st.write("")
         st.markdown("</div>", unsafe_allow_html=True)
         
-        # Expected vs Generated Diff
-        st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-        st.markdown("### 🔍 Semantic Comparison (Expected vs Generated)")
-        diff_html = generate_diff_html(st.session_state.current_analysis['expected'], st.session_state.current_analysis['generated'])
-        st.markdown(f"<div style='line-height: 1.6; padding: 10px; background: rgba(0,0,0,0.3); border-radius: 8px;'>{diff_html}</div>", unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
+        # Expected vs Generated Diff (Only in Benchmark Mode)
+        if st.session_state.current_analysis.get('is_benchmark', False):
+            st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
+            st.markdown("### 🔍 Semantic Comparison (Expected vs Generated)")
+            diff_html = generate_diff_html(st.session_state.current_analysis['expected'], st.session_state.current_analysis['generated'])
+            st.markdown(f"<div style='line-height: 1.6; padding: 10px; background: rgba(0,0,0,0.3); border-radius: 8px;'>{diff_html}</div>", unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
         
         # AI Coach Feature
         st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
@@ -203,10 +222,16 @@ with col2:
                     st.rerun()
         else:
             fb = st.session_state.coach_feedback
-            st.warning(f"**Critique:** {fb['critique']}")
-            st.markdown("###### Suggestions:")
-            for s in fb['improvement_suggestions']:
-                st.markdown(f"- {s}")
-            st.markdown("###### ✨ Improved Reply:")
-            st.info(fb['improved_reply'])
+            if "error" in fb:
+                st.error(f"Coach Failed: {fb['error']}")
+            else:
+                st.success(f"**Expected Score:** {fb.get('Expected_Score', 'N/A')}% (Up from {eval_data['Overall Score']}%)")
+                st.markdown("###### ✅ Strengths:")
+                for s in fb.get('Strengths', []):
+                    st.markdown(f"- {s}")
+                st.markdown("###### 🎯 Weaknesses:")
+                for w in fb.get('Weaknesses', []):
+                    st.markdown(f"- {w}")
+                st.markdown("###### ✨ Improved Reply:")
+                st.info(fb.get('Improved_Reply', ''))
         st.markdown("</div>", unsafe_allow_html=True)

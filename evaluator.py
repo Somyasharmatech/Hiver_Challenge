@@ -9,9 +9,10 @@ import textwrap
 
 # Download nltk requirements safely
 try:
-    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('tokenizers/punkt_tab')
 except LookupError:
     nltk.download('punkt', quiet=True)
+    nltk.download('punkt_tab', quiet=True)
 
 class Evaluator:
     def __init__(self):
@@ -76,20 +77,31 @@ class Evaluator:
         
         length_diff = abs(len(expected.split()) - len(generated.split()))
         
-        # Map Qualitative Metrics (from Gemini JSON)
-        prof_score = qual_metrics.get("Professionalism", {}).get("score", 7) * 10
-        emp_score = qual_metrics.get("Empathy", {}).get("score", 7) * 10
-        gram_score = qual_metrics.get("Grammar", {}).get("score", 7) * 10
-        comp_score = qual_metrics.get("Completeness", {}).get("score", 7) * 10
+        # Map Qualitative Metrics (from Gemini JSON) - NO PLACEHOLDERS
+        prof_score = qual_metrics["Professionalism"]["score"] * 10
+        emp_score = qual_metrics["Empathy"]["score"] * 10
+        gram_score = qual_metrics["Grammar"]["score"] * 10
+        comp_score = qual_metrics["Completeness"]["score"] * 10
         
-        prof_reason = qual_metrics.get("Professionalism", {}).get("reason", "Standard tone.")
-        emp_reason = qual_metrics.get("Empathy", {}).get("reason", "Acceptable empathy.")
-        gram_reason = qual_metrics.get("Grammar", {}).get("reason", "No major issues.")
-        comp_reason = qual_metrics.get("Completeness", {}).get("reason", "Addressed main points.")
-        hallu_reason = qual_metrics.get("Hallucination Risk", {}).get("reason", "Low risk.")
+        prof_reason = qual_metrics["Professionalism"]["reason"]
+        emp_reason = qual_metrics["Empathy"]["reason"]
+        gram_reason = qual_metrics["Grammar"]["reason"]
+        comp_reason = qual_metrics["Completeness"]["reason"]
+        
+        hallu_score_raw = qual_metrics["Hallucination Risk"]["score"]
+        hallu_score = hallu_score_raw * 10
+        hallu_reason_raw = qual_metrics["Hallucination Risk"]["reason"]
+        
+        if hallu_score <= 30:
+            hallu_reason = f"Low Risk: {hallu_reason_raw}"
+        elif hallu_score <= 70:
+            hallu_reason = f"Medium Risk: {hallu_reason_raw}"
+        else:
+            hallu_reason = f"High Risk: {hallu_reason_raw}"
 
         # Compute Overall Score (Weighted)
         # NLP metrics: 40%, Qual Metrics: 60%
+        # NOTE: Hallucination Risk is not in the overall score calculation directly
         overall = (
             (bleu["score"] * 0.10) +
             (rouge["score"] * 0.15) +
@@ -126,6 +138,67 @@ class Evaluator:
                 "Empathy": {"score": emp_score, "reason": emp_reason},
                 "Grammar": {"score": gram_score, "reason": gram_reason},
                 "Completeness": {"score": comp_score, "reason": comp_reason},
-                "Hallucination Risk": {"score": qual_metrics.get("Hallucination Risk", {}).get("score", 10)*10, "reason": hallu_reason}
+                "Hallucination Risk": {"score": hallu_score, "reason": hallu_reason}
+            }
+        }
+
+    def run_realworld_evaluation(self, generated, qual_metrics):
+        """Evaluation without expected reply (qualitative only)."""
+        readability = self.calculate_readability(generated)
+        
+        prof_score = qual_metrics["Professionalism"]["score"] * 10
+        emp_score = qual_metrics["Empathy"]["score"] * 10
+        gram_score = qual_metrics["Grammar"]["score"] * 10
+        comp_score = qual_metrics["Completeness"]["score"] * 10
+        help_score = qual_metrics["Helpfulness"]["score"] * 10
+        
+        prof_reason = qual_metrics["Professionalism"]["reason"]
+        emp_reason = qual_metrics["Empathy"]["reason"]
+        gram_reason = qual_metrics["Grammar"]["reason"]
+        comp_reason = qual_metrics["Completeness"]["reason"]
+        help_reason = qual_metrics["Helpfulness"]["reason"]
+        
+        hallu_score_raw = qual_metrics["Hallucination Risk"]["score"]
+        hallu_score = hallu_score_raw * 10
+        hallu_reason_raw = qual_metrics["Hallucination Risk"]["reason"]
+        
+        if hallu_score <= 30:
+            hallu_reason = f"Low Risk: {hallu_reason_raw}"
+        elif hallu_score <= 70:
+            hallu_reason = f"Medium Risk: {hallu_reason_raw}"
+        else:
+            hallu_reason = f"High Risk: {hallu_reason_raw}"
+        
+        overall = (
+            (prof_score * 0.25) +
+            (emp_score * 0.25) +
+            (gram_score * 0.20) +
+            (comp_score * 0.15) +
+            (help_score * 0.15)
+        )
+        overall = min(round(overall, 1), 100)
+        
+        stars_num = max(1, min(5, int(overall / 20) + (1 if overall % 20 > 10 else 0)))
+        stars_str = "⭐" * stars_num
+        
+        if overall >= 90:
+            recommendation = "✅ Safe to Send"
+        elif overall >= 70:
+            recommendation = "⚠ Needs Review"
+        else:
+            recommendation = "❌ Poor Reply"
+            
+        return {
+            "Overall Score": overall,
+            "Stars": stars_str,
+            "Recommendation": recommendation,
+            "Metrics": {
+                "Readability": readability,
+                "Professionalism": {"score": prof_score, "reason": prof_reason},
+                "Empathy": {"score": emp_score, "reason": emp_reason},
+                "Grammar": {"score": gram_score, "reason": gram_reason},
+                "Completeness": {"score": comp_score, "reason": comp_reason},
+                "Helpfulness": {"score": help_score, "reason": help_reason},
+                "Hallucination Risk": {"score": hallu_score, "reason": hallu_reason}
             }
         }
