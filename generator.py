@@ -39,7 +39,7 @@ class AIGenerator:
         # For evaluation & coach, we might want lower temperature
         self.eval_model = genai.GenerativeModel(GEMINI_MODEL_NAME, generation_config={"temperature": 0.1})
 
-    def _generate_with_retry(self, prompt, model_instance, retries=1):
+    def _generate_with_retry(self, prompt, model_instance, retries=3):
         for attempt in range(retries + 1):
             try:
                 response = model_instance.generate_content(prompt)
@@ -48,7 +48,9 @@ class AIGenerator:
                 log_error("errors.log", f"Gemini API Error (Attempt {attempt+1}): {str(e)}", e)
                 if attempt == retries:
                     raise e
-                time.sleep(1)
+                # Exponential backoff for rate limits (3s, 6s, 12s)
+                sleep_time = 3 * (2 ** attempt)
+                time.sleep(sleep_time)
 
     def analyze_email(self, email_body):
         """Step 1: AI Reasoning Pipeline - Extract intent, sentiment, etc."""
