@@ -1,0 +1,1527 @@
+[
+    {
+        "id": 1,
+        "category": "Delivery Delay",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "Hello, I ordered a Laptop (Order ID: TRX43689) on Monday, but it hasn't arrived yet. The tracking hasn't updated in 3 days. What's going on?",
+        "expected_reply": "Hello Karan,\n\nI apologize for the delay with your Laptop (Order TRX43689). We are experiencing some unexpected shipping delays. I have escalated this with our courier, and it should arrive within the next 48 hours. Let me know if you need anything else.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "delivery",
+            "delay",
+            "order",
+            "tracking"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Delivery Delay",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Hi team, my Mechanical Keyboard was supposed to be delivered yesterday. Can you check the status of HVR62654? Thanks.",
+        "expected_reply": "Hello Anjali,\n\nI apologize for the delay with your Mechanical Keyboard (Order HVR62654). We are experiencing some unexpected shipping delays. I have escalated this with our courier, and it should arrive within the next 48 hours. Let me know if you need anything else.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "delivery",
+            "status",
+            "order"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Delivery Delay",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "I am extremely frustrated. My INV28262 containing the Monitor is delayed by a week! Please resolve this immediately.",
+        "expected_reply": "Hello Riya,\n\nI apologize for the delay with your Monitor (Order INV28262). We are experiencing some unexpected shipping delays. I have escalated this with our courier, and it should arrive within the next 48 hours. Let me know if you need anything else.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "frustrated",
+            "delay",
+            "resolve"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Delivery Delay",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "Hey, just checking on INV66348. The Wireless Headphones seems to be stuck in transit.",
+        "expected_reply": "Hello Amit,\n\nI apologize for the delay with your Wireless Headphones (Order INV66348). We are experiencing some unexpected shipping delays. I have escalated this with our courier, and it should arrive within the next 48 hours. Let me know if you need anything else.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "checking",
+            "transit",
+            "stuck"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Delivery Delay",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "My order TRX96397 for a Mechanical Keyboard is late. I need this for work urgently. Please expedite.",
+        "expected_reply": "Hello Karan,\n\nI apologize for the delay with your Mechanical Keyboard (Order TRX96397). We are experiencing some unexpected shipping delays. I have escalated this with our courier, and it should arrive within the next 48 hours. Let me know if you need anything else.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "late",
+            "urgently",
+            "expedite"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Refund Request",
+        "customer_name": "Sneha Joshi",
+        "customer_email": "sneha.joshi@example.com",
+        "email_body": "I would like to request a refund for ORD32449. The Laptop did not meet my expectations.",
+        "expected_reply": "Hi Sneha,\n\nI'm sorry to hear the Laptop didn't meet your expectations. I have processed the refund for order ORD32449. You should see the amount credited to your original payment method within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "refund",
+            "expectations",
+            "order"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "Refund Request",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Please process a refund for my recent purchase of Monitor. Order number is TRX96178.",
+        "expected_reply": "Hi Anjali,\n\nI'm sorry to hear the Monitor didn't meet your expectations. I have processed the refund for order TRX96178. You should see the amount credited to your original payment method within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "process",
+            "refund",
+            "purchase"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "Refund Request",
+        "customer_name": "Sneha Joshi",
+        "customer_email": "sneha.joshi@example.com",
+        "email_body": "I'm very disappointed with the Laptop. I demand a full refund for ORD35104 immediately.",
+        "expected_reply": "Hi Sneha,\n\nI'm sorry to hear the Laptop didn't meet your expectations. I have processed the refund for order ORD35104. You should see the amount credited to your original payment method within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "disappointed",
+            "demand",
+            "refund"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "Refund Request",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "Hi, I returned my Wireless Headphones but haven't received my refund for HVR79509 yet.",
+        "expected_reply": "Hi Riya,\n\nI'm sorry to hear the Wireless Headphones didn't meet your expectations. I have processed the refund for order HVR79509. You should see the amount credited to your original payment method within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "returned",
+            "refund",
+            "received"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "Refund Request",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Can you help me get a refund for ORD77445? The Router isn't what I wanted.",
+        "expected_reply": "Hi Anjali,\n\nI'm sorry to hear the Router didn't meet your expectations. I have processed the refund for order ORD77445. You should see the amount credited to your original payment method within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "help",
+            "refund",
+            "wanted"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "Return Request",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "I need to return the External SSD I bought (Order TRX40113). How do I get a return label?",
+        "expected_reply": "Hello Karan,\n\nWe can certainly help you return your External SSD (Order TRX40113). I have just emailed you a prepaid return shipping label. Once we receive the item, we will process your refund or replacement.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "return",
+            "label",
+            "order"
+        ]
+    },
+    {
+        "id": 12,
+        "category": "Return Request",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "The Wireless Headphones is too small. I want to return INV66174. Please advise.",
+        "expected_reply": "Hello Amit,\n\nWe can certainly help you return your Wireless Headphones (Order INV66174). I have just emailed you a prepaid return shipping label. Once we receive the item, we will process your refund or replacement.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "return",
+            "small",
+            "advise"
+        ]
+    },
+    {
+        "id": 13,
+        "category": "Return Request",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "I am returning order TRX95820 because the Mechanical Keyboard is not as described. Send instructions.",
+        "expected_reply": "Hello Riya,\n\nWe can certainly help you return your Mechanical Keyboard (Order TRX95820). I have just emailed you a prepaid return shipping label. Once we receive the item, we will process your refund or replacement.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "returning",
+            "described",
+            "instructions"
+        ]
+    },
+    {
+        "id": 14,
+        "category": "Return Request",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "Hi, what is your return policy for Mechanical Keyboard? My order number is INV41612.",
+        "expected_reply": "Hello Karan,\n\nWe can certainly help you return your Mechanical Keyboard (Order INV41612). I have just emailed you a prepaid return shipping label. Once we receive the item, we will process your refund or replacement.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "policy",
+            "return",
+            "order"
+        ]
+    },
+    {
+        "id": 15,
+        "category": "Return Request",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Please initiate a return for my Wireless Headphones under order TRX60028.",
+        "expected_reply": "Hello Anjali,\n\nWe can certainly help you return your Wireless Headphones (Order TRX60028). I have just emailed you a prepaid return shipping label. Once we receive the item, we will process your refund or replacement.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "initiate",
+            "return"
+        ]
+    },
+    {
+        "id": 16,
+        "category": "Damaged Product",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "My Gaming Mouse arrived completely shattered! Order HVR34299. This is unacceptable.",
+        "expected_reply": "Dear Amit,\n\nI am so sorry to hear that your Gaming Mouse arrived damaged! That is not the experience we want for you. I am shipping a replacement for order HVR34299 immediately via overnight delivery. You don't need to return the broken item.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "shattered",
+            "damaged",
+            "unacceptable"
+        ]
+    },
+    {
+        "id": 17,
+        "category": "Damaged Product",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "Hi, I opened order INV73922 and the Mechanical Keyboard has a huge scratch on it.",
+        "expected_reply": "Dear Amit,\n\nI am so sorry to hear that your Mechanical Keyboard arrived damaged! That is not the experience we want for you. I am shipping a replacement for order INV73922 immediately via overnight delivery. You don't need to return the broken item.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "scratch",
+            "damaged",
+            "opened"
+        ]
+    },
+    {
+        "id": 18,
+        "category": "Damaged Product",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "The packaging was fine but the Monitor inside (Order TRX26147) is broken.",
+        "expected_reply": "Dear Vikram,\n\nI am so sorry to hear that your Monitor arrived damaged! That is not the experience we want for you. I am shipping a replacement for order TRX26147 immediately via overnight delivery. You don't need to return the broken item.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "broken",
+            "packaging",
+            "damaged"
+        ]
+    },
+    {
+        "id": 19,
+        "category": "Damaged Product",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I received my Mechanical Keyboard today (Order INV35908) and it's damaged. How can we fix this?",
+        "expected_reply": "Dear Sanjay,\n\nI am so sorry to hear that your Mechanical Keyboard arrived damaged! That is not the experience we want for you. I am shipping a replacement for order INV35908 immediately via overnight delivery. You don't need to return the broken item.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "received",
+            "damaged",
+            "fix"
+        ]
+    },
+    {
+        "id": 20,
+        "category": "Damaged Product",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "Terrible experience. The Wireless Headphones for ORD92159 is completely unusable due to damage.",
+        "expected_reply": "Dear Karan,\n\nI am so sorry to hear that your Wireless Headphones arrived damaged! That is not the experience we want for you. I am shipping a replacement for order ORD92159 immediately via overnight delivery. You don't need to return the broken item.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "terrible",
+            "unusable",
+            "damage"
+        ]
+    },
+    {
+        "id": 21,
+        "category": "Wrong Product",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I ordered a Laptop but received something entirely different. Order ORD85031.",
+        "expected_reply": "Hi Sanjay,\n\nI sincerely apologize for the mix-up with order ORD85031. We accidentally sent you the wrong item instead of the Laptop. I've arranged for the correct item to be shipped out today, along with a return label for the incorrect item.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "ordered",
+            "received",
+            "wrong",
+            "different"
+        ]
+    },
+    {
+        "id": 22,
+        "category": "Wrong Product",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "This is not what I ordered! I wanted a Laptop, but got a completely wrong item for TRX15556.",
+        "expected_reply": "Hi Riya,\n\nI sincerely apologize for the mix-up with order TRX15556. We accidentally sent you the wrong item instead of the Laptop. I've arranged for the correct item to be shipped out today, along with a return label for the incorrect item.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "not",
+            "wrong",
+            "item"
+        ]
+    },
+    {
+        "id": 23,
+        "category": "Wrong Product",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Order HVR83422 is incorrect. I got the wrong model of Mechanical Keyboard.",
+        "expected_reply": "Hi Anjali,\n\nI sincerely apologize for the mix-up with order HVR83422. We accidentally sent you the wrong item instead of the Mechanical Keyboard. I've arranged for the correct item to be shipped out today, along with a return label for the incorrect item.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "incorrect",
+            "wrong",
+            "model"
+        ]
+    },
+    {
+        "id": 24,
+        "category": "Wrong Product",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "Hi, you sent me the wrong Smartwatch. My order is TRX31758. Please send the right one.",
+        "expected_reply": "Hi Priya,\n\nI sincerely apologize for the mix-up with order TRX31758. We accidentally sent you the wrong item instead of the Smartwatch. I've arranged for the correct item to be shipped out today, along with a return label for the incorrect item.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "sent",
+            "wrong",
+            "right"
+        ]
+    },
+    {
+        "id": 25,
+        "category": "Wrong Product",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "I think there was a mixup with INV41287. I didn't order this Smartwatch.",
+        "expected_reply": "Hi Rahul,\n\nI sincerely apologize for the mix-up with order INV41287. We accidentally sent you the wrong item instead of the Smartwatch. I've arranged for the correct item to be shipped out today, along with a return label for the incorrect item.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "mixup",
+            "didn't",
+            "order"
+        ]
+    },
+    {
+        "id": 26,
+        "category": "Password Reset",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "I forgot my password and the reset link isn't working. Can you help?",
+        "expected_reply": "Hello Amit,\n\nI understand you're having trouble resetting your password. I have triggered a manual password reset email to your address. Please check your inbox (and spam folder) and click the link to create a new password.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "forgot",
+            "password",
+            "reset",
+            "link"
+        ]
+    },
+    {
+        "id": 27,
+        "category": "Password Reset",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "Please send a manual password reset link for my account.",
+        "expected_reply": "Hello Rahul,\n\nI understand you're having trouble resetting your password. I have triggered a manual password reset email to your address. Please check your inbox (and spam folder) and click the link to create a new password.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "manual",
+            "password",
+            "reset"
+        ]
+    },
+    {
+        "id": 28,
+        "category": "Password Reset",
+        "customer_name": "Sneha Joshi",
+        "customer_email": "sneha.joshi@example.com",
+        "email_body": "I can't access my account to check my Laptop order. I need a password reset.",
+        "expected_reply": "Hello Sneha,\n\nI understand you're having trouble resetting your password. I have triggered a manual password reset email to your address. Please check your inbox (and spam folder) and click the link to create a new password.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "access",
+            "account",
+            "reset"
+        ]
+    },
+    {
+        "id": 29,
+        "category": "Password Reset",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "Hi, I am not receiving the password reset emails. Please check.",
+        "expected_reply": "Hello Rahul,\n\nI understand you're having trouble resetting your password. I have triggered a manual password reset email to your address. Please check your inbox (and spam folder) and click the link to create a new password.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "receiving",
+            "emails",
+            "reset"
+        ]
+    },
+    {
+        "id": 30,
+        "category": "Password Reset",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "Reset my password please. I am locked out.",
+        "expected_reply": "Hello Amit,\n\nI understand you're having trouble resetting your password. I have triggered a manual password reset email to your address. Please check your inbox (and spam folder) and click the link to create a new password.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "reset",
+            "password",
+            "locked"
+        ]
+    },
+    {
+        "id": 31,
+        "category": "Login Issue",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "I am trying to log in to track my External SSD but it keeps saying invalid credentials.",
+        "expected_reply": "Hi Rahul,\n\nI'm sorry you are having trouble logging in. I have checked your account and reset your login attempts to unlock it. Please try logging in again, or let me know if you need a password reset.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "log",
+            "invalid",
+            "credentials"
+        ]
+    },
+    {
+        "id": 32,
+        "category": "Login Issue",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "My account is locked after too many attempts. Please unlock it.",
+        "expected_reply": "Hi Karan,\n\nI'm sorry you are having trouble logging in. I have checked your account and reset your login attempts to unlock it. Please try logging in again, or let me know if you need a password reset.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "locked",
+            "attempts",
+            "unlock"
+        ]
+    },
+    {
+        "id": 33,
+        "category": "Login Issue",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "The login page is throwing a 500 error every time I try to sign in.",
+        "expected_reply": "Hi Sanjay,\n\nI'm sorry you are having trouble logging in. I have checked your account and reset your login attempts to unlock it. Please try logging in again, or let me know if you need a password reset.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "login",
+            "error",
+            "sign"
+        ]
+    },
+    {
+        "id": 34,
+        "category": "Login Issue",
+        "customer_name": "Neha Gupta",
+        "customer_email": "neha.gupta@example.com",
+        "email_body": "I can't log in from my new phone. It asks for an OTP which never comes.",
+        "expected_reply": "Hi Neha,\n\nI'm sorry you are having trouble logging in. I have checked your account and reset your login attempts to unlock it. Please try logging in again, or let me know if you need a password reset.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "log",
+            "phone",
+            "OTP"
+        ]
+    },
+    {
+        "id": 35,
+        "category": "Login Issue",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Help! I am unable to login to my dashboard.",
+        "expected_reply": "Hi Anjali,\n\nI'm sorry you are having trouble logging in. I have checked your account and reset your login attempts to unlock it. Please try logging in again, or let me know if you need a password reset.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "help",
+            "unable",
+            "login"
+        ]
+    },
+    {
+        "id": 36,
+        "category": "Payment Failure",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "My card was charged for the Smartphone (Order TRX13996) but it says payment failed?",
+        "expected_reply": "Dear Karan,\n\nI see the payment issue for the Smartphone. Sometimes transactions fail due to bank security blocks. Your card was not successfully charged for order TRX13996. Please try checking out again with a different card or PayPal.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "charged",
+            "payment",
+            "failed"
+        ]
+    },
+    {
+        "id": 37,
+        "category": "Payment Failure",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I tried to buy a External SSD but the checkout keeps failing with an error code.",
+        "expected_reply": "Dear Sanjay,\n\nI see the payment issue for the External SSD. Sometimes transactions fail due to bank security blocks. Your card was not successfully charged for order HVR97425. Please try checking out again with a different card or PayPal.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "buy",
+            "checkout",
+            "failing"
+        ]
+    },
+    {
+        "id": 38,
+        "category": "Payment Failure",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "Payment failed for HVR89057 but money left my bank account. Fix this now.",
+        "expected_reply": "Dear Priya,\n\nI see the payment issue for the Monitor. Sometimes transactions fail due to bank security blocks. Your card was not successfully charged for order HVR89057. Please try checking out again with a different card or PayPal.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "payment",
+            "failed",
+            "money",
+            "bank"
+        ]
+    },
+    {
+        "id": 39,
+        "category": "Payment Failure",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "Why is my credit card being declined for the Router purchase?",
+        "expected_reply": "Dear Sanjay,\n\nI see the payment issue for the Router. Sometimes transactions fail due to bank security blocks. Your card was not successfully charged for order HVR76880. Please try checking out again with a different card or PayPal.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "credit",
+            "declined",
+            "purchase"
+        ]
+    },
+    {
+        "id": 40,
+        "category": "Payment Failure",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "I am getting a payment gateway error when trying to pay for TRX22506.",
+        "expected_reply": "Dear Vikram,\n\nI see the payment issue for the Monitor. Sometimes transactions fail due to bank security blocks. Your card was not successfully charged for order TRX22506. Please try checking out again with a different card or PayPal.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "gateway",
+            "error",
+            "pay"
+        ]
+    },
+    {
+        "id": 41,
+        "category": "Subscription Cancellation",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "I want to cancel my monthly subscription. Please stop charging me.",
+        "expected_reply": "Hello Vikram,\n\nI have successfully cancelled your subscription as requested. You will not be charged going forward, but you will retain access until the end of your current billing cycle. We're sad to see you go!\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "cancel",
+            "monthly",
+            "subscription"
+        ]
+    },
+    {
+        "id": 42,
+        "category": "Subscription Cancellation",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "Cancel my premium plan immediately. I don't use it anymore.",
+        "expected_reply": "Hello Karan,\n\nI have successfully cancelled your subscription as requested. You will not be charged going forward, but you will retain access until the end of your current billing cycle. We're sad to see you go!\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "cancel",
+            "premium",
+            "plan"
+        ]
+    },
+    {
+        "id": 43,
+        "category": "Subscription Cancellation",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "How do I cancel my subscription? There's no button on the dashboard.",
+        "expected_reply": "Hello Anjali,\n\nI have successfully cancelled your subscription as requested. You will not be charged going forward, but you will retain access until the end of your current billing cycle. We're sad to see you go!\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "how",
+            "cancel",
+            "dashboard"
+        ]
+    },
+    {
+        "id": 44,
+        "category": "Subscription Cancellation",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "Please process a cancellation for my account effective today.",
+        "expected_reply": "Hello Sanjay,\n\nI have successfully cancelled your subscription as requested. You will not be charged going forward, but you will retain access until the end of your current billing cycle. We're sad to see you go!\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "process",
+            "cancellation",
+            "effective"
+        ]
+    },
+    {
+        "id": 45,
+        "category": "Subscription Cancellation",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "I am frustrated with the service. Cancel my subscription and delete my data.",
+        "expected_reply": "Hello Vikram,\n\nI have successfully cancelled your subscription as requested. You will not be charged going forward, but you will retain access until the end of your current billing cycle. We're sad to see you go!\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "frustrated",
+            "cancel",
+            "delete"
+        ]
+    },
+    {
+        "id": 46,
+        "category": "Billing Problem",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I was double billed for my Wireless Headphones purchase (Order HVR68793).",
+        "expected_reply": "Hi Sanjay,\n\nI apologize for the billing confusion regarding order HVR68793. I've reviewed your account and corrected the invoice for your Wireless Headphones. You'll receive the updated copy shortly, and we've refunded any overcharges.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "double",
+            "billed",
+            "purchase"
+        ]
+    },
+    {
+        "id": 47,
+        "category": "Billing Problem",
+        "customer_name": "Neha Gupta",
+        "customer_email": "neha.gupta@example.com",
+        "email_body": "There is a weird $5 charge on my invoice INV69529 that I don't recognize.",
+        "expected_reply": "Hi Neha,\n\nI apologize for the billing confusion regarding order INV69529. I've reviewed your account and corrected the invoice for your Smartphone. You'll receive the updated copy shortly, and we've refunded any overcharges.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "weird",
+            "charge",
+            "invoice"
+        ]
+    },
+    {
+        "id": 48,
+        "category": "Billing Problem",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "My invoice for HVR24804 is missing the company VAT number. Please update it.",
+        "expected_reply": "Hi Sanjay,\n\nI apologize for the billing confusion regarding order HVR24804. I've reviewed your account and corrected the invoice for your Tablet. You'll receive the updated copy shortly, and we've refunded any overcharges.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "invoice",
+            "missing",
+            "VAT"
+        ]
+    },
+    {
+        "id": 49,
+        "category": "Billing Problem",
+        "customer_name": "Sneha Joshi",
+        "customer_email": "sneha.joshi@example.com",
+        "email_body": "You charged me for a Monitor even though I cancelled order INV47663!",
+        "expected_reply": "Hi Sneha,\n\nI apologize for the billing confusion regarding order INV47663. I've reviewed your account and corrected the invoice for your Monitor. You'll receive the updated copy shortly, and we've refunded any overcharges.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "charged",
+            "cancelled",
+            "order"
+        ]
+    },
+    {
+        "id": 50,
+        "category": "Billing Problem",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "Please send a corrected bill for HVR98295. The total is wrong.",
+        "expected_reply": "Hi Amit,\n\nI apologize for the billing confusion regarding order HVR98295. I've reviewed your account and corrected the invoice for your Tablet. You'll receive the updated copy shortly, and we've refunded any overcharges.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "corrected",
+            "bill",
+            "total"
+        ]
+    },
+    {
+        "id": 51,
+        "category": "Feature Request",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "It would be great if your app had a dark mode. Will you add it?",
+        "expected_reply": "Hello Riya,\n\nThanks for reaching out! That is a great suggestion for the Router. I have forwarded your feature request to our product development team. We are always looking for ways to improve, so we appreciate your feedback.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Positive",
+        "keywords": [
+            "great",
+            "dark",
+            "mode",
+            "add"
+        ]
+    },
+    {
+        "id": 52,
+        "category": "Feature Request",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "Can you integrate the Router with Google Calendar in the next update?",
+        "expected_reply": "Hello Vikram,\n\nThanks for reaching out! That is a great suggestion for the Router. I have forwarded your feature request to our product development team. We are always looking for ways to improve, so we appreciate your feedback.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "integrate",
+            "Google",
+            "Calendar",
+            "update"
+        ]
+    },
+    {
+        "id": 53,
+        "category": "Feature Request",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "I really wish you had a bulk export feature for the invoices.",
+        "expected_reply": "Hello Amit,\n\nThanks for reaching out! That is a great suggestion for the Smartwatch. I have forwarded your feature request to our product development team. We are always looking for ways to improve, so we appreciate your feedback.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "wish",
+            "bulk",
+            "export",
+            "invoices"
+        ]
+    },
+    {
+        "id": 54,
+        "category": "Feature Request",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "Please add support for multiple users on a single Smartphone license.",
+        "expected_reply": "Hello Riya,\n\nThanks for reaching out! That is a great suggestion for the Smartphone. I have forwarded your feature request to our product development team. We are always looking for ways to improve, so we appreciate your feedback.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "support",
+            "multiple",
+            "users",
+            "license"
+        ]
+    },
+    {
+        "id": 55,
+        "category": "Feature Request",
+        "customer_name": "Sneha Joshi",
+        "customer_email": "sneha.joshi@example.com",
+        "email_body": "Feature request: Allow us to customize the dashboard layout.",
+        "expected_reply": "Hello Sneha,\n\nThanks for reaching out! That is a great suggestion for the Tablet. I have forwarded your feature request to our product development team. We are always looking for ways to improve, so we appreciate your feedback.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "feature",
+            "request",
+            "customize",
+            "layout"
+        ]
+    },
+    {
+        "id": 56,
+        "category": "Account Deletion",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "I want to permanently delete my account and all associated data.",
+        "expected_reply": "Hi Karan,\n\nPer your request, I have permanently deleted your account and all associated data from our systems. This action is irreversible. If you ever wish to return, you will need to create a new account.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "permanently",
+            "delete",
+            "account",
+            "data"
+        ]
+    },
+    {
+        "id": 57,
+        "category": "Account Deletion",
+        "customer_name": "Neha Gupta",
+        "customer_email": "neha.gupta@example.com",
+        "email_body": "Please close my account immediately. I no longer need your services.",
+        "expected_reply": "Hi Neha,\n\nPer your request, I have permanently deleted your account and all associated data from our systems. This action is irreversible. If you ever wish to return, you will need to create a new account.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "close",
+            "account",
+            "immediately"
+        ]
+    },
+    {
+        "id": 58,
+        "category": "Account Deletion",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "How do I delete my profile? I can't find the option anywhere.",
+        "expected_reply": "Hi Priya,\n\nPer your request, I have permanently deleted your account and all associated data from our systems. This action is irreversible. If you ever wish to return, you will need to create a new account.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "delete",
+            "profile",
+            "option"
+        ]
+    },
+    {
+        "id": 59,
+        "category": "Account Deletion",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "Remove my email from your database and delete my account.",
+        "expected_reply": "Hi Priya,\n\nPer your request, I have permanently deleted your account and all associated data from our systems. This action is irreversible. If you ever wish to return, you will need to create a new account.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "remove",
+            "email",
+            "database",
+            "delete"
+        ]
+    },
+    {
+        "id": 60,
+        "category": "Account Deletion",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "I am requesting a GDPR account deletion.",
+        "expected_reply": "Hi Vikram,\n\nPer your request, I have permanently deleted your account and all associated data from our systems. This action is irreversible. If you ever wish to return, you will need to create a new account.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "requesting",
+            "GDPR",
+            "deletion"
+        ]
+    },
+    {
+        "id": 61,
+        "category": "General Inquiry",
+        "customer_name": "Neha Gupta",
+        "customer_email": "neha.gupta@example.com",
+        "email_body": "Do you offer bulk discounts if I order 50 units of the Gaming Mouse?",
+        "expected_reply": "Hello Neha,\n\nThank you for your interest in our Gaming Mouse. [Answer will be provided based on specific inquiry]. Let me know if you have any other questions and I'd be happy to help!\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "bulk",
+            "discounts",
+            "units"
+        ]
+    },
+    {
+        "id": 62,
+        "category": "General Inquiry",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "Where are your Smartwatchs manufactured?",
+        "expected_reply": "Hello Sanjay,\n\nThank you for your interest in our Smartwatch. [Answer will be provided based on specific inquiry]. Let me know if you have any other questions and I'd be happy to help!\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "manufactured",
+            "where"
+        ]
+    },
+    {
+        "id": 63,
+        "category": "General Inquiry",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Hi, I just wanted to know if the External SSD comes with a warranty.",
+        "expected_reply": "Hello Anjali,\n\nThank you for your interest in our External SSD. [Answer will be provided based on specific inquiry]. Let me know if you have any other questions and I'd be happy to help!\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "warranty",
+            "comes"
+        ]
+    },
+    {
+        "id": 64,
+        "category": "General Inquiry",
+        "customer_name": "Sneha Joshi",
+        "customer_email": "sneha.joshi@example.com",
+        "email_body": "What are your customer support hours?",
+        "expected_reply": "Hello Sneha,\n\nThank you for your interest in our Tablet. [Answer will be provided based on specific inquiry]. Let me know if you have any other questions and I'd be happy to help!\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "customer",
+            "support",
+            "hours"
+        ]
+    },
+    {
+        "id": 65,
+        "category": "General Inquiry",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "Can I use the Router with a Mac?",
+        "expected_reply": "Hello Rahul,\n\nThank you for your interest in our Router. [Answer will be provided based on specific inquiry]. Let me know if you have any other questions and I'd be happy to help!\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "use",
+            "Mac",
+            "compatibility"
+        ]
+    },
+    {
+        "id": 66,
+        "category": "Shipping Address Change",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "I need to change the shipping address for order HVR41996 before it ships.",
+        "expected_reply": "Hi Amit,\n\nI've successfully updated the shipping address for order HVR41996. Your Gaming Mouse will now be shipped to the new address provided. Let me know if you need further assistance!\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "change",
+            "shipping",
+            "address"
+        ]
+    },
+    {
+        "id": 67,
+        "category": "Shipping Address Change",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "Oops, I entered the wrong zip code for order ORD53281. Can you fix it?",
+        "expected_reply": "Hi Karan,\n\nI've successfully updated the shipping address for order ORD53281. Your External SSD will now be shipped to the new address provided. Let me know if you need further assistance!\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "wrong",
+            "zip",
+            "code",
+            "fix"
+        ]
+    },
+    {
+        "id": 68,
+        "category": "Shipping Address Change",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "Please update my delivery address for the Smartphone to my new office.",
+        "expected_reply": "Hi Riya,\n\nI've successfully updated the shipping address for order INV25210. Your Smartphone will now be shipped to the new address provided. Let me know if you need further assistance!\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "update",
+            "delivery",
+            "address",
+            "office"
+        ]
+    },
+    {
+        "id": 69,
+        "category": "Shipping Address Change",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "I am moving next week. Can you ship order ORD84038 to my new address?",
+        "expected_reply": "Hi Anjali,\n\nI've successfully updated the shipping address for order ORD84038. Your Router will now be shipped to the new address provided. Let me know if you need further assistance!\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Neutral",
+        "keywords": [
+            "moving",
+            "ship",
+            "new",
+            "address"
+        ]
+    },
+    {
+        "id": 70,
+        "category": "Shipping Address Change",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "Change address for INV40061 immediately. It has my old apartment number.",
+        "expected_reply": "Hi Sanjay,\n\nI've successfully updated the shipping address for order INV40061. Your Gaming Mouse will now be shipped to the new address provided. Let me know if you need further assistance!\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "change",
+            "address",
+            "immediately",
+            "old"
+        ]
+    },
+    {
+        "id": 71,
+        "category": "Order Status",
+        "customer_name": "Sneha Joshi",
+        "customer_email": "sneha.joshi@example.com",
+        "email_body": "What is the status of my order INV14178 for the Monitor?",
+        "expected_reply": "Hello Sneha,\n\nThanks for checking in on order INV14178. Your Monitor is currently being packed in our warehouse and is scheduled to ship later today. You will receive an email with tracking information as soon as it leaves.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "status",
+            "order"
+        ]
+    },
+    {
+        "id": 72,
+        "category": "Order Status",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "Has order INV95905 shipped yet? I placed it yesterday.",
+        "expected_reply": "Hello Priya,\n\nThanks for checking in on order INV95905. Your Monitor is currently being packed in our warehouse and is scheduled to ship later today. You will receive an email with tracking information as soon as it leaves.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "shipped",
+            "placed",
+            "yesterday"
+        ]
+    },
+    {
+        "id": 73,
+        "category": "Order Status",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "I need an update on my External SSD purchase. Order ID is ORD55899.",
+        "expected_reply": "Hello Anjali,\n\nThanks for checking in on order ORD55899. Your External SSD is currently being packed in our warehouse and is scheduled to ship later today. You will receive an email with tracking information as soon as it leaves.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "update",
+            "purchase",
+            "order"
+        ]
+    },
+    {
+        "id": 74,
+        "category": "Order Status",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Can you tell me when TRX44987 will be dispatched?",
+        "expected_reply": "Hello Anjali,\n\nThanks for checking in on order TRX44987. Your Gaming Mouse is currently being packed in our warehouse and is scheduled to ship later today. You will receive an email with tracking information as soon as it leaves.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "dispatched",
+            "when"
+        ]
+    },
+    {
+        "id": 75,
+        "category": "Order Status",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "My order TRX15703 says 'processing' for 3 days. Status please.",
+        "expected_reply": "Hello Priya,\n\nThanks for checking in on order TRX15703. Your Laptop is currently being packed in our warehouse and is scheduled to ship later today. You will receive an email with tracking information as soon as it leaves.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "processing",
+            "days",
+            "status"
+        ]
+    },
+    {
+        "id": 76,
+        "category": "Coupon Problem",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "The discount code 'SAVE20' is not working on my Smartphone purchase.",
+        "expected_reply": "Hi Amit,\n\nI'm sorry you had trouble with the coupon code. I've manually applied the discount to your Smartphone purchase (Order INV84704) and refunded the difference to your original payment method. \n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "discount",
+            "code",
+            "working",
+            "purchase"
+        ]
+    },
+    {
+        "id": 77,
+        "category": "Coupon Problem",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I forgot to apply my 10% coupon to order ORD32710. Can you apply it retroactively?",
+        "expected_reply": "Hi Sanjay,\n\nI'm sorry you had trouble with the coupon code. I've manually applied the discount to your Monitor purchase (Order ORD32710) and refunded the difference to your original payment method. \n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "forgot",
+            "apply",
+            "coupon",
+            "retroactively"
+        ]
+    },
+    {
+        "id": 78,
+        "category": "Coupon Problem",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "Why does it say my promo code is invalid for the Smartphone?",
+        "expected_reply": "Hi Vikram,\n\nI'm sorry you had trouble with the coupon code. I've manually applied the discount to your Smartphone purchase (Order ORD94519) and refunded the difference to your original payment method. \n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "promo",
+            "code",
+            "invalid"
+        ]
+    },
+    {
+        "id": 79,
+        "category": "Coupon Problem",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "My welcome discount wasn't applied to order TRX28166.",
+        "expected_reply": "Hi Rahul,\n\nI'm sorry you had trouble with the coupon code. I've manually applied the discount to your Gaming Mouse purchase (Order TRX28166) and refunded the difference to your original payment method. \n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "welcome",
+            "discount",
+            "applied"
+        ]
+    },
+    {
+        "id": 80,
+        "category": "Coupon Problem",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I tried to use the holiday coupon but the checkout crashed.",
+        "expected_reply": "Hi Sanjay,\n\nI'm sorry you had trouble with the coupon code. I've manually applied the discount to your Monitor purchase (Order HVR37236) and refunded the difference to your original payment method. \n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "holiday",
+            "coupon",
+            "checkout",
+            "crashed"
+        ]
+    },
+    {
+        "id": 81,
+        "category": "Gift Card Issue",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I can't redeem my $50 gift card. It says invalid code.",
+        "expected_reply": "Hello Sanjay,\n\nI apologize for the issue with the gift card. I've checked the balance and reset the code. You should now be able to apply it successfully towards your External SSD. Let me know if it still gives you an error.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "redeem",
+            "gift",
+            "card",
+            "invalid"
+        ]
+    },
+    {
+        "id": 82,
+        "category": "Gift Card Issue",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "I purchased a gift card for a friend (Order HVR53438) but they never received the email.",
+        "expected_reply": "Hello Rahul,\n\nI apologize for the issue with the gift card. I've checked the balance and reset the code. You should now be able to apply it successfully towards your Router. Let me know if it still gives you an error.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "purchased",
+            "gift",
+            "card",
+            "received"
+        ]
+    },
+    {
+        "id": 83,
+        "category": "Gift Card Issue",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "Can I split my payment between a gift card and credit card for a Smartphone?",
+        "expected_reply": "Hello Amit,\n\nI apologize for the issue with the gift card. I've checked the balance and reset the code. You should now be able to apply it successfully towards your Smartphone. Let me know if it still gives you an error.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "split",
+            "payment",
+            "gift",
+            "card"
+        ]
+    },
+    {
+        "id": 84,
+        "category": "Gift Card Issue",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "What is the balance on my gift card? I want to buy a Smartphone.",
+        "expected_reply": "Hello Priya,\n\nI apologize for the issue with the gift card. I've checked the balance and reset the code. You should now be able to apply it successfully towards your Smartphone. Let me know if it still gives you an error.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "balance",
+            "gift",
+            "card",
+            "buy"
+        ]
+    },
+    {
+        "id": 85,
+        "category": "Gift Card Issue",
+        "customer_name": "Riya Mehta",
+        "customer_email": "riya.mehta@example.com",
+        "email_body": "My gift card expired yesterday! Can you extend it so I can buy the Router?",
+        "expected_reply": "Hello Riya,\n\nI apologize for the issue with the gift card. I've checked the balance and reset the code. You should now be able to apply it successfully towards your Router. Let me know if it still gives you an error.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "expired",
+            "extend",
+            "buy"
+        ]
+    },
+    {
+        "id": 86,
+        "category": "Late Refund",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "It's been 10 days since you approved my refund for TRX45988 and I haven't seen the money.",
+        "expected_reply": "Dear Amit,\n\nI apologize for the delay in your refund for order TRX45988. I checked with our finance team and the refund was processed on our end, but it sometimes takes banks up to 10 days to post the funds. It should appear very soon.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "days",
+            "approved",
+            "refund",
+            "money"
+        ]
+    },
+    {
+        "id": 87,
+        "category": "Late Refund",
+        "customer_name": "Priya Singh",
+        "customer_email": "priya.singh@example.com",
+        "email_body": "Where is my refund for the returned Monitor? Order INV68394.",
+        "expected_reply": "Dear Priya,\n\nI apologize for the delay in your refund for order INV68394. I checked with our finance team and the refund was processed on our end, but it sometimes takes banks up to 10 days to post the funds. It should appear very soon.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "where",
+            "refund",
+            "returned"
+        ]
+    },
+    {
+        "id": 88,
+        "category": "Late Refund",
+        "customer_name": "Amit Patel",
+        "customer_email": "amit.patel@example.com",
+        "email_body": "You said the refund for ORD37187 would take 3-5 days. It's been a week.",
+        "expected_reply": "Dear Amit,\n\nI apologize for the delay in your refund for order ORD37187. I checked with our finance team and the refund was processed on our end, but it sometimes takes banks up to 10 days to post the funds. It should appear very soon.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "said",
+            "refund",
+            "days",
+            "week"
+        ]
+    },
+    {
+        "id": 89,
+        "category": "Late Refund",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "I am still waiting on the refund for order INV14933. This is ridiculous.",
+        "expected_reply": "Dear Vikram,\n\nI apologize for the delay in your refund for order INV14933. I checked with our finance team and the refund was processed on our end, but it sometimes takes banks up to 10 days to post the funds. It should appear very soon.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "waiting",
+            "refund",
+            "ridiculous"
+        ]
+    },
+    {
+        "id": 90,
+        "category": "Late Refund",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "Please check the refund status for TRX24816. My bank says nothing is pending.",
+        "expected_reply": "Dear Anjali,\n\nI apologize for the delay in your refund for order TRX24816. I checked with our finance team and the refund was processed on our end, but it sometimes takes banks up to 10 days to post the funds. It should appear very soon.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "check",
+            "refund",
+            "status",
+            "bank"
+        ]
+    },
+    {
+        "id": 91,
+        "category": "Duplicate Payment",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "I was charged twice for order ORD19483. Please reverse one of the charges.",
+        "expected_reply": "Hi Rahul,\n\nI apologize for the duplicate charge on order ORD19483. I have immediately voided the second transaction for the Router. You should see the funds returned to your account within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "charged",
+            "twice",
+            "reverse",
+            "charges"
+        ]
+    },
+    {
+        "id": 92,
+        "category": "Duplicate Payment",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "My bank statement shows two identical payments for the Wireless Headphones.",
+        "expected_reply": "Hi Rahul,\n\nI apologize for the duplicate charge on order INV55752. I have immediately voided the second transaction for the Wireless Headphones. You should see the funds returned to your account within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "bank",
+            "statement",
+            "identical",
+            "payments"
+        ]
+    },
+    {
+        "id": 93,
+        "category": "Duplicate Payment",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I accidentally submitted the payment twice for ORD94728. Need a refund for the duplicate.",
+        "expected_reply": "Hi Sanjay,\n\nI apologize for the duplicate charge on order ORD94728. I have immediately voided the second transaction for the Tablet. You should see the funds returned to your account within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Neutral",
+        "keywords": [
+            "accidentally",
+            "submitted",
+            "payment",
+            "twice"
+        ]
+    },
+    {
+        "id": 94,
+        "category": "Duplicate Payment",
+        "customer_name": "Vikram Reddy",
+        "customer_email": "vikram.reddy@example.com",
+        "email_body": "You guys billed me 2 times for the Mechanical Keyboard. Order TRX79213. Fix this.",
+        "expected_reply": "Hi Vikram,\n\nI apologize for the duplicate charge on order TRX79213. I have immediately voided the second transaction for the Mechanical Keyboard. You should see the funds returned to your account within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "billed",
+            "times",
+            "fix"
+        ]
+    },
+    {
+        "id": 95,
+        "category": "Duplicate Payment",
+        "customer_name": "Neha Gupta",
+        "customer_email": "neha.gupta@example.com",
+        "email_body": "Duplicate charge alert! Order TRX68885 hit my card twice today.",
+        "expected_reply": "Hi Neha,\n\nI apologize for the duplicate charge on order TRX68885. I have immediately voided the second transaction for the Mechanical Keyboard. You should see the funds returned to your account within 3-5 business days.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "duplicate",
+            "charge",
+            "alert",
+            "hit"
+        ]
+    },
+    {
+        "id": 96,
+        "category": "Technical Issue",
+        "customer_name": "Anjali Desai",
+        "customer_email": "anjali.desai@example.com",
+        "email_body": "The website keeps freezing when I try to add the Router to my cart.",
+        "expected_reply": "Hello Anjali,\n\nI'm sorry you are experiencing a technical issue with the Router page. Our engineering team is aware of this bug and they are working on a fix right now. We appreciate your patience while we resolve this.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "website",
+            "freezing",
+            "cart"
+        ]
+    },
+    {
+        "id": 97,
+        "category": "Technical Issue",
+        "customer_name": "Rahul Sharma",
+        "customer_email": "rahul.sharma@example.com",
+        "email_body": "I am getting a 404 error when clicking on my order TRX58538 link.",
+        "expected_reply": "Hello Rahul,\n\nI'm sorry you are experiencing a technical issue with the External SSD page. Our engineering team is aware of this bug and they are working on a fix right now. We appreciate your patience while we resolve this.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "error",
+            "clicking",
+            "link"
+        ]
+    },
+    {
+        "id": 98,
+        "category": "Technical Issue",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "Your iOS app is crashing every time I open the Smartphone page.",
+        "expected_reply": "Hello Sanjay,\n\nI'm sorry you are experiencing a technical issue with the Smartphone page. Our engineering team is aware of this bug and they are working on a fix right now. We appreciate your patience while we resolve this.\n\nBest,\nSupport Team",
+        "priority": "High",
+        "sentiment": "Negative",
+        "keywords": [
+            "iOS",
+            "app",
+            "crashing",
+            "page"
+        ]
+    },
+    {
+        "id": 99,
+        "category": "Technical Issue",
+        "customer_name": "Karan Malhotra",
+        "customer_email": "karan.malhotra@example.com",
+        "email_body": "Images are not loading on the Wireless Headphones description page.",
+        "expected_reply": "Hello Karan,\n\nI'm sorry you are experiencing a technical issue with the Wireless Headphones page. Our engineering team is aware of this bug and they are working on a fix right now. We appreciate your patience while we resolve this.\n\nBest,\nSupport Team",
+        "priority": "Low",
+        "sentiment": "Neutral",
+        "keywords": [
+            "images",
+            "loading",
+            "description"
+        ]
+    },
+    {
+        "id": 100,
+        "category": "Technical Issue",
+        "customer_name": "Sanjay Kumar",
+        "customer_email": "sanjay.kumar@example.com",
+        "email_body": "I can't download my invoice for ORD44851. The button does nothing.",
+        "expected_reply": "Hello Sanjay,\n\nI'm sorry you are experiencing a technical issue with the Smartwatch page. Our engineering team is aware of this bug and they are working on a fix right now. We appreciate your patience while we resolve this.\n\nBest,\nSupport Team",
+        "priority": "Medium",
+        "sentiment": "Negative",
+        "keywords": [
+            "download",
+            "invoice",
+            "button"
+        ]
+    }
+]
